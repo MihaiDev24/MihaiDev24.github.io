@@ -18,8 +18,8 @@ body {
 /* Encabezado */
 header {
     background-color: #222;
-    padding: 20px;
-    font-size: 26px;
+    padding: 1.5rem;
+    font-size: clamp(1.5rem, 5vw, 2rem);
     color: white;
     text-transform: uppercase;
     font-weight: bold;
@@ -28,47 +28,52 @@ header {
 /* Menú de navegación */
 nav {
     background-color: #333;
-    padding: 15px;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    padding: 12px 25px;
-    margin: 0 10px;
-    display: inline-block;
-    font-size: 18px;
+    padding: 0.75rem 1.5rem;
+    font-size: clamp(1rem, 3vw, 1.125rem);
     transition: background 0.3s, color 0.3s;
+    border-radius: 5px;
 }
 
 nav a:hover {
     background-color: #555;
     color: orange;
-    border-radius: 5px;
 }
 
 /* Secciones */
 section {
-    padding: 30px;
+    padding: 1.5rem;
     border-bottom: 2px solid #444;
-    max-width: 80%;
-    margin: auto;
+    max-width: min(90%, 1200px);
+    margin: 0 auto;
 }
 
 /* Tablas */
 table {
-    width: 90%;
-    margin: 20px auto;
+    width: 100%;
+    margin: 1.5rem auto;
     border: 2px solid white;
     border-collapse: collapse;
     background-color: #444;
+    overflow-x: auto;
+    display: block;
 }
 
 th, td {
     border: 1px solid white;
-    padding: 12px;
+    padding: 0.75rem;
     color: white;
     text-align: center;
+    font-size: clamp(0.875rem, 2vw, 1rem);
 }
 
 th {
@@ -78,10 +83,10 @@ th {
 
 /* Imágenes */
 img {
-    max-width: 80%;
+    max-width: min(90%, 600px);
     height: auto;
     display: block;
-    margin: 20px auto;
+    margin: 1.5rem auto;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
 }
@@ -89,31 +94,31 @@ img {
 /* Videos */
 video {
     width: 100%;
-    max-width: 550px;
+    max-width: min(90%, 550px);
     display: block;
-    margin: 20px auto;
+    margin: 1.5rem auto;
     border-radius: 8px;
 }
 
 /* Listas */
 ul, ol {
     text-align: left;
-    margin: 20px auto;
-    width: 60%;
-    padding-left: 20px;
+    margin: 1.5rem auto;
+    width: min(90%, 600px);
+    padding-left: 1.5rem;
 }
 
 li {
-    padding: 8px;
-    font-size: 18px;
+    padding: 0.5rem;
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
 }
 
 /* Formulario */
 form {
     background-color: #222;
-    padding: 25px;
-    width: 50%;
-    margin: 30px auto;
+    padding: 1.5rem;
+    width: min(90%, 500px);
+    margin: 2rem auto;
     border: 2px solid #444;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
@@ -121,24 +126,26 @@ form {
 
 input, textarea {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
     border: 1px solid #555;
     border-radius: 5px;
     background-color: #333;
     color: white;
+    font-size: 1rem;
 }
 
 /* Botones */
 button {
     background-color: orange;
     color: black;
-    padding: 12px 20px;
+    padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s;
-    font-size: 16px;
+    font-size: 1rem;
+    margin-top: 0.5rem;
 }
 
 button:hover {
@@ -155,71 +162,61 @@ a:hover {
     color: orange;
 }
 
-/* Responsive */
-@media (max-width: 1200px) {
-    section {
-        max-width: 90%;
-    }
-
-    ul, ol {
-        width: 80%;
-    }
-
-    table {
-        width: 100%;
-    }
-
-    img {
-        max-width: 85%;
-    }
-
-    form {
-        width: 70%;
-    }
-}
-
+/* Media Queries específicas */
 @media (max-width: 768px) {
-    section {
-        max-width: 95%;
+    /* Tablet vertical y móvil */
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
     }
-
-    ul, ol, dl {
+    
+    nav a {
         width: 90%;
+        text-align: center;
     }
-
-    table {
-        width: 100%;
-    }
-
-    img {
-        max-width: 90%;
-    }
-
-    form {
-        width: 80%;
+    
+    th, td {
+        padding: 0.5rem;
     }
 }
 
 @media (max-width: 480px) {
-    header {
-        font-size: 22px;
-        padding: 15px;
-    }
-
-    nav a {
-        padding: 8px 15px;
-        font-size: 16px;
-    }
-
+    /* Móvil vertical */
     section {
-        padding: 20px;
+        padding: 1rem;
     }
-
-    table, form {
-        width: 100%;
+    
+    ul, ol {
+        padding-left: 1rem;
     }
+    
+    form {
+        padding: 1rem;
+    }
+}
 
-    img {
-        max-width: 95%;
+@media (max-width: 768px) and (orientation: landscape) {
+    /* Tablet y móvil horizontal */
+    header {
+        padding: 1rem;
+    }
+    
+    nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0.75rem;
+    }
+    
+    nav a {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    /* Pantallas grandes */
+    section {
+        padding: 2rem;
     }
 }
