@@ -156,6 +156,28 @@ a:hover {
 }
 
 /* Responsive */
+@media (max-width: 1200px) {
+    section {
+        max-width: 90%;
+    }
+
+    ul, ol {
+        width: 80%;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    img {
+        max-width: 85%;
+    }
+
+    form {
+        width: 70%;
+    }
+}
+
 @media (max-width: 768px) {
     section {
         max-width: 95%;
@@ -176,4 +198,43 @@ a:hover {
     form {
         width: 80%;
     }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 22px;
+        padding: 15px;
+    }
+
+    nav a {
+        padding: 8px 15px;
+        font-size: 16px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    table, form {
+        width: 100%;
+    }
+
+    img {
+        max-width: 95%;
+    }
+}
+
+/* Ajustes de rutas (se asume que los archivos están en la carpeta "imagenes", "video" y "audio") */
+img[src*="imagenes/"] {
+    width: 100%;
+    max-width: 400px; /* ajuste para imágenes grandes */
+}
+
+video[src*="Video/OUTERWILDS_LaunchTrailer.mp4"] {
+    max-width: 100%;
+    height: auto;
+}
+
+audio[src*="Audio/OuterWilds.mp3"] {
+    width: 100%;
 }
