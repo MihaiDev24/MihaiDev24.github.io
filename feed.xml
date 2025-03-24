@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+        <title>Outer Wilds: arqueología en el espacio</title>
+        <link>https://mihaidev24.github.io/</link>
+        <description>Blog sobre el juego Outer Wilds, su historia y curiosidades</description>
+        <language>es</language>
+        
+        <item>
+            <title>Sobre el juego</title>
+            <link>https://mihaidev24.github.io/#Descripcion</link>
+            <description>Outer Wilds es un juego de exploración en mundo abierto con una historia intrigante y mecánicas únicas.</description>
+            <pubDate>Sat, 08 Mar 2025 12:00:00 GMT</pubDate>
+        </item>
+        
+        <item>
+            <title>7 Datos sobre la creación de Outer Wilds</title>
+            <link>https://mihaidev24.github.io/#curiosidades</link>
+            <description>Descubre 7 datos interesantes sobre cómo se desarrolló Outer Wilds, desde su inicio como un proyecto universitario hasta su éxito global.</description>
+            <pubDate>Sat, 08 Mar 2025 12:00:00 GMT</pubDate>
+        </item>
+    </channel>
+</rss>
