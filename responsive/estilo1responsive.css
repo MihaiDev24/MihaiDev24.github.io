@@ -223,18 +223,3 @@ a:hover {
         max-width: 95%;
     }
 }
-
-/* Ajustes de rutas (se asume que los archivos están en la carpeta "imagenes", "video" y "audio") */
-img[src*="imagenes/"] {
-    width: 100%;
-    max-width: 400px; /* ajuste para imágenes grandes */
-}
-
-video[src*="Video/OUTERWILDS_LaunchTrailer.mp4"] {
-    max-width: 100%;
-    height: auto;
-}
-
-audio[src*="Audio/OuterWilds.mp3"] {
-    width: 100%;
-}
