@@ -83,7 +83,7 @@ th {
 
 /* Imágenes */
 img {
-    max-width: min(90%, 600px);
+    max-width: 90%;
     height: auto;
     display: block;
     margin: 1.5rem auto;
@@ -94,7 +94,7 @@ img {
 /* Videos */
 video {
     width: 100%;
-    max-width: min(90%, 550px);
+    max-width: 90%;
     display: block;
     margin: 1.5rem auto;
     border-radius: 8px;
@@ -170,12 +170,12 @@ a:hover {
         align-items: center;
         gap: 0.5rem;
     }
-    
+
     nav a {
         width: 90%;
         text-align: center;
     }
-    
+
     th, td {
         padding: 0.5rem;
     }
@@ -186,11 +186,11 @@ a:hover {
     section {
         padding: 1rem;
     }
-    
+
     ul, ol {
         padding-left: 1rem;
     }
-    
+
     form {
         padding: 1rem;
     }
@@ -201,13 +201,13 @@ a:hover {
     header {
         padding: 1rem;
     }
-    
+
     nav {
         flex-direction: row;
         flex-wrap: wrap;
         padding: 0.75rem;
     }
-    
+
     nav a {
         padding: 0.5rem 1rem;
         font-size: 0.9rem;
